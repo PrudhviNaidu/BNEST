@@ -1,0 +1,110 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+//
+// Color system
+//
+
+// stylelint-disable
+
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$body-back   : #e9ecf3;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminium   : #a6a8b3;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
+$Mirage:        #192f59 !default;
+$red:           #f6251a !default;
+$orange:        #fd7e14 !default;
+$yellow:        #ffc107 !default;
+$green:         #3db166 !default;
+$teal:          #20c997 !default;
+$cyan:          #17a2b8 !default;
+$brown:         #964b00 !default;
+$catskill-White:#ECF0F5 !default;
+// $carrot-orange: #f18b1d !default;
+$gray-900:      #212529 !default;
+$input-focus:   #ffd3ae !default;
+$sub-header-text: #96a2b8 !default;
+
+
+//use these varible names
+$primary:           $Mirage !default;
+$secondary:         $green !default;
+$tertiary:          $orange !default;
+$success:           $green !default;
+$info:              $cyan !default;
+$warning:           $yellow !default;
+$danger:            $red !default;
+
+$dflt-txt-clr:      $black !default;
+$lght-blue-txt-clr: #d4e1fa !default;
+$faded-txt-clr:     $monsoon !default;
+$disabled-txt-clr:  $base !default;
+$shaded-bg-clr:     $gainsboro;
+$inactive-button-color: $jumbo;
+$actn-btn-color:    $success;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+$bodybg:           $catskill-White !default;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:    'Poppins', sans-serif !important;
+$font-family-base:          $font-family-sans-serif !important;
+$default-font-family:       'Poppins', sans-serif !default;
+$secondary-font-family:     'Poppins', sans-serif !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+
+//header
+$header-background:         $white !default;
+$header-height:             80px !default;
+
+//side Nav bar
+$side-nav-text:             $aluminium !default;
+$side-nav-active-text:      $white !default;
+
+//login
+$login-button:              $tertiary !default;
+
+//dashboard
+$daboard-search-btn:        $tertiary !default;
+
+html {
+  font-size: 14px;
+}
+body {
+  font-family: $default-font-family !important;
+  background: $bodybg !important;
+  color: $dflt-txt-clr;
+  font-weight: 400;
+}
