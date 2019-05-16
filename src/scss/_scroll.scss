@@ -1,0 +1,35 @@
+.header1, .header2, .header3 {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container1, .progress-container2, .progress-container3 {
+  width: 3px !important;
+  height: 100vw;
+  background: #ef5252;
+  -webkit-transform: rotate(300deg);
+  transform: rotate(50deg);
+  position: fixed;
+  color: red;
+  width: 100vw;
+  top: -20vw;
+}
+.progress-container2{
+  margin: 0px 35px;
+  width: 8px !important;
+}
+
+.progress-container3{
+  margin: 0px 100px;
+  width: 12px !important;
+
+}
+
+.progress-bar1, .progress-bar2, .progress-bar3 {
+  height: 8px;
+  width: 0%;
+  background: red;
+}

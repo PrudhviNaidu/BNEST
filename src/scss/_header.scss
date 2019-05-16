@@ -1,14 +1,32 @@
 .header--main {
-  padding: 0px 40px !important;
+  position: fixed !important;
+  z-index: 999;
+  top: 40px;
+  width: 100%;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
+  @media (max-width: 575.98px) {
+    padding: 20px 0px !important;
+  }
   .header--left {
     float: left;
     .header--logo1 {
-      height: 70px;
+      height: 80px;
       padding: 0px 8px 0px 20px;
       width: 120px;
+      cursor: pointer;
+      @media (max-width: 575.98px) {
+        height: 62px;
+        padding: 0px 8px 0px 10px;
+        width: 95px;
+      }
     }
     .header--logo2 {
       height: 90px;
+      cursor: pointer;
+      @media (max-width: 575.98px) {
+        height: 67px;
+      }
     }
   }
   .header--right {
@@ -27,8 +45,11 @@
           a {
             font-weight: 500;
             font-size: 16px;
+            color: rgba(0, 0, 0, 0.8);
           }
-          &:hover {
+          &:hover,
+          &:active,
+          &:focus {
             border-bottom: 5px solid $secondary;
           }
         }
@@ -43,7 +64,11 @@
 .header--sub {
   background: $primary;
   color: $sub-header-text;
-  padding: 20px 20%;
+  padding: 10px 20%;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
   .header--sub__left {
     font-size: 15px;
   }
@@ -54,6 +79,13 @@
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
+    // position: relative;
+    // float: left;
+    // width:  100px;
+    // height: 100px;
+    // background-position: 50% 50%;
+    // background-repeat:   no-repeat;
+    // background-size:     cover;
   }
   .carousel-indicators {
     bottom: 110px;
@@ -73,6 +105,7 @@
   top: -110px;
   z-index: 99;
   margin: 0px !important;
+  padding: 0 20%;
   .incubator--grid-transparent {
     background: transparent;
   }
@@ -80,6 +113,7 @@
     background: white;
     padding: 40px 30px;
     box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    width: 100%;
     .incub--stats__header {
       text-align: center;
       font-weight: 700;
@@ -90,7 +124,6 @@
 }
 
 .aboutus {
-  background: url("/assets/images/dna.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,8 +134,9 @@
   height: 40vh;
   .aboutus--grid {
     margin: 0px !important;
-    background: rgba(27, 41, 69, 0.9);
+    // background: rgba(27, 41, 69, 0.9);
     height: 40vh;
+    background: $primary;
     .aboutus--grid__content {
       padding: 130px 0px;
       color: white;
@@ -126,6 +160,7 @@
     height: 50vh;
     background: $primary;
     padding: 60px 0px;
+    margin: 0px;
     h2 {
       color: $secondary;
       font-size: 40px;
@@ -160,8 +195,11 @@
 }
 
 .news-quick--grid {
-  .news--grid__content, .quickactn--grid__content {
-    .news--grid__cont-h3, .quickactn--grid__cont-h3{
+  margin: 0px !important;
+  .news--grid__content,
+  .quickactn--grid__content {
+    .news--grid__cont-h3,
+    .quickactn--grid__cont-h3 {
       display: inline-flex;
       width: 100%;
       padding-top: 40px;
@@ -173,7 +211,7 @@
         color: $primary;
         padding-right: 30px;
       }
-      .line{
+      .line {
         font-size: 24px;
         border-bottom-width: 3px;
         overflow: hidden;
@@ -185,13 +223,13 @@
         top: -16px;
       }
     }
-    .news--list{
+    .news--list {
       padding-top: 20px;
-      .fontaws{
+      .fontaws {
         font-size: 50px;
         color: $aluminum;
       }
-      .newslist-sub{
+      .newslist-sub {
         color: $aluminum;
         font-size: 13px;
         font-weight: 600;
@@ -199,7 +237,7 @@
         letter-spacing: 1px;
         text-transform: uppercase;
       }
-      .newslist-head{
+      .newslist-head {
         font-size: 16px;
         font-weight: 700;
         letter-spacing: 0px;
@@ -212,27 +250,45 @@
       }
     }
   }
-  .quickactn--grid__content{
+  .quickactn--grid__content {
     padding-left: 40px;
-    .quickactn--grid__cont-h3{
-      .line{
+    .quickactn--grid__cont-h3 {
+      .line {
         width: 50%;
       }
     }
-    .quickactn--grid__link{
-      .quicklink{
+    .quickactn--grid__link {
+      .quicklink {
         padding-bottom: 5px;
         margin: 10px;
         color: $secondary;
         border-bottom: 1px solid $gainsboro;
         width: 100%;
         display: block;
-
       }
     }
   }
 }
 
-.learnmore-text-clr{
+.learnmore-text-clr {
   color: $secondary;
+}
+
+a {
+  outline: none !important;
+}
+
+img:focus,
+a:focus {
+  outline: none;
+}
+
+.container-fluid{
+  margin-top: 160px;
+  position: relative;
+  z-index: 4;
+}
+
+.news--grid__content{
+  background: white;
 }
