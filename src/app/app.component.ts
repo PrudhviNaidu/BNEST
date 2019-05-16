@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { Directive, HostListener } from "@angular/core";
+import { HostListener } from "@angular/core";
+import { Router, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: "app-root",
@@ -8,7 +9,18 @@ import { Directive, HostListener } from "@angular/core";
 })
 export class AppComponent {
   title = "BIONEST";
+  currentUrl: string;
 
+  constructor(private _router: Router) {
+    this._router.events.subscribe(event => {
+      if (event instanceof NavigationEnd ) {
+        if (event.url) {
+          this.currentUrl = event.url.replace("/", "");
+        }
+      }
+    });
+
+  }
   @HostListener("window:scroll", ["$event"])
   scrollHandler(event) {
     var winScroll =
@@ -18,9 +30,12 @@ export class AppComponent {
     var scrolled3 = (winScroll / 230) * 100;
     var scrolled4 = (winScroll / 15000) * 100;
 
-    document.getElementById("progress-container1").style.left = scrolled1 + "px";
-    document.getElementById("progress-container2").style.left = scrolled2 + "px";
-    document.getElementById("progress-container3").style.left = scrolled3 + "px";
+    document.getElementById("progress-container1").style.left =
+      scrolled1 + "px";
+    document.getElementById("progress-container2").style.left =
+      scrolled2 + "px";
+    document.getElementById("progress-container3").style.left =
+      scrolled3 + "px";
     document.getElementById("more").style.top = 25 + scrolled4 + "vh";
   }
 }

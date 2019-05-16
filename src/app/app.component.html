@@ -7,17 +7,15 @@
   </nav>
 
   <header class="navbar navbar-expand-lg navbar-light bg-light header--main">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#" [routerLink]="['/home']">
       <div class="header--left">
         <img
           src="./../assets/images/output-onlinepngtools.png"
           class="header--logo1"
-          [routerLink]="['/home']"
         />
         <img
           src="./../assets/images/uoh.png"
           class="header--logo2"
-          [routerLink]="['/home']"
         />
       </div>
     </a>
@@ -36,36 +34,36 @@
     <div class="collapse navbar-collapse header--right" id="navbarNavDropdown">
       <span class="navbar-text">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'about'? 'active': ''">
             <a class="nav-link" href="#aboutus" [routerLink]="['/about']">
               About
             </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'facilities'? 'active': ''">
             <a class="nav-link" href="#facilities" [routerLink]="['/facilities']"> Facilities </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'mentors'? 'active': ''">
             <a class="nav-link" href="#mentors" [routerLink]="['/mentors']"> Mentors </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'partners'? 'active': ''">
             <a class="nav-link" href="#partners" [routerLink]="['/partners']"> Partners </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'services'? 'active': ''">
             <a class="nav-link" href="#services" [routerLink]="['/services']"> Services </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'events'? 'active': ''">
             <a class="nav-link" href="#events" [routerLink]="['/events']"> Events </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'gallery'? 'active': ''">
             <a class="nav-link" href="#gallery" [routerLink]="['/gallery']"> Gallery </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'downloads'? 'active': ''">
             <a class="nav-link" href="#downloads" [routerLink]="['/downloads']"> Downloads </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'jobs'? 'active': ''">
             <a class="nav-link" href="#jobs" [routerLink]="['/jobs']"> Jobs </a>
           </li>
-          <li class="nav-item header--right__li">
+          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'contact'? 'active': ''">
             <a class="nav-link" href="#contact" [routerLink]="['/contact']"> Contact </a>
           </li>
         </ul>
