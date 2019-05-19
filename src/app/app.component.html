@@ -1,9 +1,13 @@
 <div (scroll)="scrollHandler($event)" data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="header--sub">
     <div class="header--sub__left">
-      <i class="far fa-envelope-open"></i> &nbsp; reachus@bionest.in &nbsp;
-      &nbsp; +91 - 9493026949
+      <i class="fas fa-envelope-open"></i> &nbsp; ceo-bionest@uohyd.ac.in  /  bd-biobest@uohyd.ac.in  /  info-bionest@uohyd.ac.in &nbsp;
+      &nbsp; &nbsp; &nbsp; <i class="fas fa-phone-volume"></i> &nbsp; 040 - 2988 1897 / 1898
     </div>
+    <!-- <div class="header--sub-right">
+      <i class="fas fa-map-marker"></i> &nbsp; UoH-BioNEST Office, 3rd Floor, School of Life Sciences,
+      University of Hyderabad.
+    </div> -->
   </nav>
 
   <header class="navbar navbar-expand-lg navbar-light bg-light header--main">
@@ -15,6 +19,10 @@
         />
         <img
           src="./../assets/images/uoh.png"
+          class="header--logo2"
+        />
+        <img
+          src="./../assets/images/birac.png"
           class="header--logo2"
         />
       </div>
@@ -51,18 +59,28 @@
           <li class="nav-item header--right__li" [ngClass]="currentUrl === 'services'? 'active': ''">
             <a class="nav-link" href="#services" [routerLink]="['/services']"> Services </a>
           </li>
-          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'events'? 'active': ''">
-            <a class="nav-link" href="#events" [routerLink]="['/events']"> Events </a>
+          <li class="nav-item dropdown nav-item header--right__li" [ngClass]="currentUrl === 'events'? 'active': ''">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Announcements
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" [routerLink]="['/events']"> Events </a>
+              <a class="dropdown-item" href="#" [routerLink]="['/gallery']"> Gallery</a>
+              <a class="dropdown-item" href="#" [routerLink]="['/downloads']"> Downloads</a>
+              <a class="dropdown-item" href="#" [routerLink]="['/jobs']"> Jobs</a>
+
+            </div>
           </li>
-          <li class="nav-item header--right__li" [ngClass]="currentUrl === 'gallery'? 'active': ''">
-            <a class="nav-link" href="#gallery" [routerLink]="['/gallery']"> Gallery </a>
+
+          <!-- <li class="nav-item header--right__li" [ngClass]="currentUrl === 'gallery'? 'active': ''">
+            <a class="nav-link" href="#gallery" > Gallery </a>
           </li>
           <li class="nav-item header--right__li" [ngClass]="currentUrl === 'downloads'? 'active': ''">
             <a class="nav-link" href="#downloads" [routerLink]="['/downloads']"> Downloads </a>
           </li>
           <li class="nav-item header--right__li" [ngClass]="currentUrl === 'jobs'? 'active': ''">
             <a class="nav-link" href="#jobs" [routerLink]="['/jobs']"> Jobs </a>
-          </li>
+          </li> -->
           <li class="nav-item header--right__li" [ngClass]="currentUrl === 'contact'? 'active': ''">
             <a class="nav-link" href="#contact" [routerLink]="['/contact']"> Contact </a>
           </li>
@@ -72,8 +90,8 @@
   </header>
 
   <div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-      <div class="col-12 col-md-12 col-xl-12 bd-sidebar">
+    <div class="row flex-xl-nowrap padding-0">
+      <div class="col-12 col-md-12 col-xl-12 bd-sidebar padding-0">
         <router-outlet></router-outlet>
       </div>
     </div>
