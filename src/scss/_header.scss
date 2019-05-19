@@ -8,7 +8,7 @@
   @media (max-width: 575.98px) {
     padding: 20px 0px !important;
   }
-  .navbar-brand{
+  .navbar-brand {
     width: 30% !important;
   }
   .header--left {
@@ -292,47 +292,126 @@ a:focus {
   outline: none;
 }
 
-.container-fluid{
+.container-fluid {
   padding-top: 155px;
   position: relative;
   z-index: 4;
 }
 
-.news--grid__content{
+.news--grid__content {
   background: white;
 }
 
-.padding-0{
+.padding-0 {
   padding: 0px !important;
 }
 
-.main-heading{
+.main-heading {
   text-align: center;
   font-size: 40px;
   font-weight: 800;
   color: #3db166;
-  margin-top: 25px;
+  // margin-top: 25px;
   padding-bottom: 40px;
-
 }
 
 .map {
   -webkit-filter: grayscale(100%);
-     -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-       -o-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
   height: 100%;
   width: 100%;
 }
 
-.more-contactus{
+.more-contactus {
   padding: 60px 20px 60px 40px !important;
-  .more-cont--head{
+  .more-cont--head {
     margin-bottom: 0px !important;
     margin-top: 0px !important;
   }
-  .contact-pad{
+  .contact-pad {
     padding-left: 20px;
+  }
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    border-left: 5px solid $white;
+    &:hover,
+    &:active,
+    &:focus {
+      border-left: 5px solid $secondary;
+    }
+  }
+}
+
+.team-section {
+  .team--name {
+    color: #4f4f4f !important;
+    margin-bottom: 1rem !important;
+    margin-top: 1.5rem !important;
+  }
+  .team--designation {
+    color: #9e9e9e !important;
+    text-transform: uppercase !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .team-image {
+    width: 270px;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+    border-radius: 0.25rem !important;
+    height: 270px;
+  }
+
+  .btn-floating.btn-sm {
+    width: 36.15385px;
+    height: 36.15385px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  .btn-floating.btn-sm i {
+    font-size: 0.96154rem;
+    line-height: 36.15385px;
+  }
+  .btn-floating i {
+    display: inline-block;
+    width: inherit;
+    text-align: center;
+    color: #fff;
+  }
+  .btn-fb {
+    background-color: #3b5998 !important;
+  }
+
+  .btn-dribbble {
+    background-color: #ee6198;
+  }
+  .btn-tw {
+    background-color: #6cb7f0;
+  }
+
+  .btn-email {
+    background-color: #565d6b;
+  }
+
+  .btn-li {
+    background-color: #0092e4;
+  }
+  .team-grid{
+    margin-bottom: 40px;
   }
 }

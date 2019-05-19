@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: "facilities", component: FacilitiesComponent },
   { path: "gallery", component: GalleryComponent },
   { path: "jobs", component: JobsComponent },
-  { path: "mentors", component: MentorsComponent },
+  { path: "team", component: MentorsComponent },
   { path: "partners", component: PartnersComponent },
   { path: "services", component: ServicesComponent },
   { path: "home", component: HomeComponent},
