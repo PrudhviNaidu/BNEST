@@ -296,6 +296,7 @@ a:focus {
   padding-top: 155px;
   position: relative;
   z-index: 4;
+  overflow-x: hidden;
 }
 
 .news--grid__content {
@@ -411,7 +412,81 @@ a:focus {
   .btn-li {
     background-color: #0092e4;
   }
-  .team-grid{
+  .team-grid {
     margin-bottom: 40px;
+  }
+}
+
+.work-in-number {
+  position: absolute;
+  bottom: 0px;
+  background: rgba(0, 17, 49, 0.5);
+  height: 108px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 20px 0px;
+  .no-marg-left-right {
+    margin: 0px;
+  }
+  .number {
+    font-size: 26px;
+    font-weight: 300;
+  }
+  .number-head {
+    font-weight: 500;
+  }
+}
+
+.work-in-number-sidebar {
+  position: absolute;
+  height: 83vh;
+  color: white;
+  width: 100px;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  z-index: 99999;
+  .work-in-side-center {
+    top: 25vh;
+    position: relative;
+  }
+  .work-in--content1,
+  .work-in--content2,
+  .work-in--content3,
+  .work-in--content4 {
+    display: inline-flex;
+    background: $secondary;
+    color: $white;
+    position: absolute;
+    padding: 7px 0;
+    width: 440px;
+    right: -367px;
+    cursor: pointer;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .number {
+      width: 75px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .number-head{
+      padding-top: 5px;
+    }
+  }
+  .work-in--content1, .work-in--content2, .work-in--content3, .work-in--content4 {
+    &:hover {
+      right: 0px;
+      transition: all ease-in 0.6s;
+    }
+  }
+
+  .work-in--content2 {
+    margin-top: 65px;
+  }
+  .work-in--content3 {
+    margin-top: 130px;
+  }
+  .work-in--content4 {
+    margin-top: 195px;
   }
 }
